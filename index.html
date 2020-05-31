@@ -33,8 +33,10 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/modal-video.min.js"></script>
     <script>
-        $(window).on('beforeunload', function() {
-            $(window).scrollTop(0);
+        $(window).on('load', function() {
+            setTimeout(function() {
+                $('html,body').scrollTop(0)
+            }, 0);
         });
 
         function bubbleSort() {
