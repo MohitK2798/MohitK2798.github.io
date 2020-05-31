@@ -27,6 +27,11 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/video.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/modal-video.min.css" />
+
+    <!--jQuery & JavaScript-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/modal-video.min.js"></script>
     <script>
         function bubbleSort() {
             window.location.href = "Bubble Sort.html";
@@ -47,6 +52,12 @@
         function stack() {
             window.location.href = "Stack.html";
         }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            new ModalVideo(".js-video-vimeo-btn", {
+                channel: 'vimeo'
+            });
+        });
     </script>
 </head>
 
@@ -115,7 +126,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-title">
-                        <a id="play-video" class="video-play-button" href="#">
+                        <a id="play-video" class="video-play-button launch-modal js-video-vimeo-btn" href="#" data-modal-id="modal-video" data-video-id="424364109">
                             <span></span>
                         </a>
                     </div>
@@ -291,7 +302,6 @@
     <!-- Footer section end -->
 
     <!--====== Javascripts & Jquery ======-->
-    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.slicknav.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
